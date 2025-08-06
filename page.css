@@ -1,0 +1,59 @@
+
+*
+{
+    margin:0 auto;
+}
+
+.first
+{
+    width: 1000px;
+    height: 200px;
+    background-color: orange;
+    color:white;
+    text-align: center;
+    font-size: 100px;
+    line-height: 200px;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+.blog
+{
+    width: 1200px;
+    height: 200px;
+    border:1px solid red;
+}
+.blog>section
+{
+    border:2px solid green;
+    width:171px;
+    height: 200px;
+    float:right;
+    box-sizing: border-box;
+    padding:10px;
+    
+}
+.second
+{
+    width: 1200px;
+    /* height: auto; */
+    /* height:200px; */
+    min-height: 200px;
+    max-height: 500px;
+    border:1px solid red;
+    margin-top:10px;
+    display: flex;
+}
+.second>section
+{
+    border:5px solid blue;
+    flex:1;
+    padding:10px;
+    margin:5px;
+    
+
+}
+.second>section>img
+{
+    width: 100%;
+}

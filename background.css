@@ -1,0 +1,63 @@
+*
+{
+    margin:0 auto;
+}
+.first
+{
+    /* background-color: orangered; */
+    /* background-color: #3daea8; */
+    /* background-color: rgb(80,20,50); */
+    background-color: rgb(50%,40%,80%);
+    height: 500px;
+}
+
+
+div
+{
+    width: 1200px;
+    height: 300px;
+    border:1px solid red;
+    margin-top:10px;
+}
+
+.second
+{
+    /* background:linear-gradient(red,orange,blue,orange); */
+     /* background:-webkit-linear-gradient(right,red,orange,blue,orange);
+     background:-moz-linear-gradient(right,red,orange,blue,orange);
+     background:-o-linear-gradient(right,red,orange,blue,orange);
+     background:-ms-linear-gradient(right,red,orange,blue,orange); */
+
+      /* background:-webkit-linear-gradient(60deg,red 50%,orange,blue,orange); */
+       background:-webkit-radial-gradient(top right,red,orange,blue,orange);
+
+}
+
+
+.third
+{
+    height: 500px;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsu_xbYM5SZohjbnZHJtuuozCbPaub22Eb5Q&s");
+    background-repeat: no-repeat;
+    background-position: 70% 10%;
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    color:white;
+    text-align: center;
+    font-size:100px;
+
+}
+.fourth
+{
+    font-size: 70px;
+    background:red url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsu_xbYM5SZohjbnZHJtuuozCbPaub22Eb5Q&s");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+}
+.fourth>h1
+{
+    /* background-color: orangered;
+    opacity: 0.1; */
+    background-color: rgb(210 243 17 / 46%);
+}
+
