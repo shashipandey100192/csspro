@@ -1,0 +1,68 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+:root
+{
+    --r:green;
+    --b:1px solid blue;
+}
+
+
+
+
+.page
+{
+    border:1px solid var(--r); 
+    width: 1200px;
+    height: auto;  
+    text-align: justify;
+    padding:20px;
+    box-sizing: border-box; 
+    column-count: 5;
+    column-gap: 30px;
+    column-rule: 3px dotted var(--r);
+}
+.page h2
+{
+    column-span: all;
+    color:var(--r);
+    margin-bottom: 20px;
+}
+
+.style1
+{
+    color:var(--r);
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.page img
+{
+    width: 100%;
+}
+.page p::first-letter
+{
+    color:var(--r);
+    font-size: 100px;
+    float:left;
+    line-height: 70px;
+    margin-right: 10px;
+}
+.mask
+{
+    font-size: 150px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+    font-family: arial black;
+    background-image: url('https://www.avikalp.com/cdn/shop/products/MWZ3789_wallpaper3.jpg?v=1746035986');
+    background-size: 100% 100%;
+    color:transparent;
+    background-clip: text;
+}
+
+
