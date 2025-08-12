@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        .row
+        {
+            width: 1200px;
+            height: 400px;
+            background-color: orange;
+            /* border:1px solid red; */
+            clip-path: polygon(0px 0px,1200px 0px,1200px 300px,0px 400px);
+            padding:100px;
+            box-sizing: border-box;
+            user-select: none;
+            writing-mode:vertical-lr;
+            direction:ltr
+        }
+        .inner
+        {
+            background-color: red;
+           height: 350px;
+           clip-path: polygon(0px 0px,1200px 0px,1200px 250px,0px 350px);
+        }
+        .custom
+        {
+           clip-path: polygon(50% 24%, 100% 0, 100% 99%, 0 100%, 0 0);
+        }
+         .custom1
+        {
+           clip-path: polygon(0 1%, 49% 24%, 100% 0, 100% 100%, 49% 81%, 0 100%);
+           background-image: url("https://images.hdqwalls.com/wallpapers/city-generator-4k-iw.jpg");
+            /* filter: grayscale(100%); */
+            animation-name: textblink;
+            animation-duration: 1s;
+           
+        }
+
+        @keyframes textblink {
+            from{}
+            to{color:red}
+        }
+
+        .box
+        {
+            height: 200px;
+            border: 1px solid red;
+        }
+        .cell
+        {
+            width:100px;
+            height: 100px;
+            background-color: orange;
+            text-align: center;
+            color:white;
+            margin:0 0 0 0;
+            animation-name: mybox1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+            /* animation-fill-mode: forwards; */
+            animation-delay: 1s;
+
+        }
+        @keyframes mybox {
+            from{}
+            to{margin-left:1000px;background-color: blue; width: 200px;border-radius: 50%;height: 200px;}
+        }
+
+         @keyframes mybox1 {
+            0%{}
+            50%{margin-left:1000px;background-color: blue; width: 200px;border-radius: 50%;height: 200px;}
+            80%{margin-left:500px;background-color: rgb(22, 228, 3); width: 100px;border-radius: 50%;height: 100px;}
+            100%{margin-left:0px;background-color: rgb(255, 0, 0); width: 100px;border-radius: 50%;height: 100px;opacity: 0;}
+        }
+
+/* body
+{
+    filter: grayscale(100%);
+
+} */
+
+    </style>
+</head>
+<body>
+    
+<div class="row">
+    <div class="row inner">
+        <p>The World Wide Web (WWW or Web) is a system of interconnected documents and other resources, accessible through the Internet, using hyperlinks to navigate between them. It's a subset of the Internet, focused on hypertext documents formatted with HTML. Essentially, it's a massive collection of web pages, websites, and</p>
+    </div>
+</div>
+
+<div class="row custom"></div>
+<div class="row custom1">
+    <h1>heading one</h1>
+    <p>The World Wide Web (WWW or Web) is a system of interconnected documents and other resources, accessible through the Internet, using hyperlinks to navigate between them. It's a subset of the Internet, focused on hypertext documents formatted with HTML. Essentially, it's a massive collection of web pages, websites, and</p>
+</div>
+
+<div class="box">
+<div class="cell"> celltext</div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
