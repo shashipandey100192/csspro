@@ -1,0 +1,42 @@
+*
+{
+    margin: 0 auto;
+    padding:0;
+}
+ul
+{
+    list-style-type: none;
+}
+
+nav
+{
+    width:100vw;
+    height: 50px;
+    background-color: lightgray;
+}
+nav li
+{
+    width:150px;
+    height: 50px;
+    border:1px solid red;
+    float:left;
+    line-height: 50px;
+    text-align: center;
+}
+nav a
+{
+    color:white;
+    background-color: rgb(1, 39, 26);
+    width:100%;
+    height: 50px;
+    float:left;
+}
+
+nav ul li ul
+{
+    display: none;
+}
+nav ul li:hover ul
+{
+    display: block;
+}

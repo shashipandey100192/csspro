@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin:5px;
+            padding:8px;
+        }
+        ul
+        {
+            list-style-type: none;
+        }
+        input:required{
+            border:1px solid red;
+        }
+
+        input:valid{
+            border:1px solid green;
+            background-color: rgb(187, 244, 187);
+            color:rgb(1, 34, 1);
+        }
+        input:invalid
+        {
+            border:1px solid red;
+            background-color: rgb(247, 190, 190);
+            color:rgb(113, 1, 1);
+        }
+        input:in-range{
+            color:white;
+        }
+        input:out-of-range
+        {
+            color:blue;
+        }
+        span
+        {
+            display: none;
+        }
+        input:checked + span
+        {
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<form>
+    <ul>
+        <li><input type="text" placeholder="username" required pattern="[A-Z]{5,}"></li>
+        <li><input type="password" placeholder="password" required></li>
+        <li><input type="date" required></li>
+        <li><input type="number" min="10" max="50" required></li>
+        <li>
+            <input type="checkbox">
+            <span>this is use for condition</span>
+        
+        </li>
+        
+        <li><input type="submit" value="submit"></li>
+    </ul>
+    </form>
+</body>
+</html>

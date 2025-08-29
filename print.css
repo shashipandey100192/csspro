@@ -1,0 +1,65 @@
+@media print{
+    @page
+    {
+        size:A4 portrait;
+        margin:30px;
+    }
+
+    .header
+    {
+        display: none;
+    }
+.logoprint
+{
+    display: block;
+    margin-left:450px;
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.page>section {
+    border: none;
+}
+
+.mycolumns
+{
+    flex-direction: column;
+
+}
+.mycolumns>div
+{
+    border:none;
+    page-break-before: always;
+    
+}
+.mycolumns p
+{
+    font-size: 30px;
+}
+.mycolumns img
+{
+    filter: grayscale(100%);
+    margin-top:50px;
+}
+
+header,footer
+{
+    display: block;
+    position: fixed;
+    z-index: 500;
+   
+}
+header
+{
+    top:0;
+}
+footer
+{
+    top:1500px;
+}
+
+
+
+
+}

@@ -1,0 +1,80 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+:root{
+    --h:500px;
+    --b:1px solid red;
+}
+main
+{
+    width:100%;
+    height: var(--h);
+    /* border:var(--b); */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+main>section
+{
+    width: 400%;
+    height: var(--h);
+    /* border:var(--b); */
+    display: flex;
+    position: relative;
+    animation:xyz 10s infinite alternate ease-in-out;
+}
+main>section>div
+{
+   border:1px solid green;
+    flex:1;
+    text-align: center;
+    font-size: 80px;
+    color:white;
+}
+section>div
+{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIizj-yKMa30aivqh1AFZ3YLdMf-VSphh8mg&s');
+    background-size: 100% 100%;
+}
+main a
+{
+    color:white;
+    font-size: 20px;
+    padding:10px;
+    background-color: red;
+    border-radius: 10px;
+    text-decoration:none;
+    text-transform: capitalize;
+    
+}
+
+@keyframes xyz {
+    0%{left:0%}
+    25%{left:0%}
+    30%{left:-100%}
+    50%{left:-100%}
+    55%{left:-200%}
+    75%{left:-200%}
+    80%{left:-300%}
+    100%{left:-300%}
+}
+
+@media(max-width:500px)
+{
+    main, main>section
+    {
+        height: 200px;
+    }
+    main>section>div
+    {
+        font-size: 20px;
+    }
+    main a
+    {
+        margin-top:100px;
+        position: fixed;
+    }
+
+
+}

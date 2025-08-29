@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        .navbar
+        {
+            width:100%;
+            height: 80px;
+            background-color: rgb(3, 54, 37);
+            display: flex;
+            align-items: center;
+        }
+        .navbar section
+        {
+            /* border:1px solid red; */
+            color:white;
+            flex:1;
+        }
+        .navbar a
+        {
+            color:white;
+        }
+        .navbar ul
+        {
+            display: flex;
+            list-style-type: none;
+            width: 50%;
+            margin-left:0;
+            align-items: center;
+        }
+        .opt
+        {
+            margin-right:0;
+            margin-left:auto !important;
+        }
+        .navbar input
+        {
+            padding:8px;
+        }
+        .navbar input:focus-visible
+        {
+            outline: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="navbar">
+        <section>
+            <ul>
+                <li> <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwS70r6aZEg6-wofSf66x7MU7FiZSEFSOIQA&s" style="width: 40px;"></a></li>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Home</a></li>
+            </ul>
+        </section>
+        <section>
+            <ul class="opt">
+                <li> <input type="search" placeholder="search"></li>
+                 <li> <input type="button" value="login"></li>
+                 <li> <input type="button" value="singUP"></li>
+            </ul>
+        </section>
+    </div>
+
+
+    
+</body>
+</html>
