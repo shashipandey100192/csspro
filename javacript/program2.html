@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="show message" onclick=" getandset()">
+<input type="button" value="dyn data" onclick="xyz()">
+
+<h1 id="one">heading one</h1>
+<input type="text" id="two">
+
+
+
+<script>
+
+    var a = "kumar";
+    a = 500;
+    const b = "kumar";
+
+    let c = "kumar";
+    c=9000;
+
+
+function abc()
+{
+    // alert(c);
+    // console.log(c);
+    document.write(c);
+
+}
+
+function getandset()
+{
+    var myinput = document.getElementById('two');
+    var heading = document.getElementById('one');
+    console.log(heading);
+    console.log(typeof(heading));
+    heading.innerHTML=c;
+    myinput.value =c;
+}
+
+function xyz()
+{
+    let name = prompt("enter emp name","kumar");
+    console.log(name);
+}
+
+
+ </script>   
+    
+</body>
+</html>
