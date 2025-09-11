@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input>
+    <button type="button">submit</button>
+    <h1 align="center">heading</h1>
+    <ol>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+    </ol>
+
+
+    <script>
+        var allele = document.querySelectorAll("ol,h1,button,input");
+        console.log(allele);
+        allele[0].addEventListener("click", () => {
+            allele[0].setAttribute("type", "text");
+            allele[0].setAttribute("title", "username");
+        });
+        allele[0].addEventListener("input", () => {
+            var a = allele[0].value;
+            
+            // console.log(a);
+            if (a == "stop") {
+                // alert("stop typesing");
+                console.log("stop typeing");
+                allele[0].removeAttribute("title");
+                var b = allele[0].getAttribute("type");
+                if (b == "text") {
+                    allele[0].setAttribute("type", "password");
+                }
+            }
+                if (a == "delete") {
+                    allele[0].remove();
+                    alert("web");
+                }
+
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

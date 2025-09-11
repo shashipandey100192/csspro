@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first
+        {
+            color:red;
+            background-color:orange;
+            padding:10px;
+        }
+        .second
+        {
+            text-transform: uppercase;
+        }
+        .third
+        {
+            text-align: center;
+        }
+        .fourth
+        {
+            animation:abc 300ms infinite alternate;
+        }
+        @keyframes abc {
+            from{}
+            to{ color:yellow;background-color: blue;}
+        }
+
+    </style>
+</head>
+<body>
+
+
+<h1 style="color:red;font-size:50"> heading</h1>
+<h2 class="first">this is static </h2>
+<p>this is text</p>
+<p>this is text</p>
+<p>this is text</p>
+<p>this is text</p>
+<p>this is text</p>
+
+
+
+<script>
+var a = document.querySelectorAll('p');
+a[0].addEventListener("click",()=>{
+    a[0].style.color="green";
+    a[0].style.backgroundColor="orange";
+    a[0].style.fontSize="50px";
+});
+
+
+a[1].addEventListener("click",()=>{
+    a[1].className="first";
+});
+
+
+a[2].addEventListener("click",()=>{
+    a[2].classList.add("first","second","third","fourth");
+});
+
+a[2].addEventListener("dblclick",()=>{
+    a[2].classList.remove("fourth");
+});
+
+
+
+a[3].addEventListener("click",()=>{
+    a[3].classList.toggle("fourth");
+});
+
+
+</script>
+
+
+</body>
+</html>
