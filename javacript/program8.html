@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+ <script>
+    var a = document.createElement("h1");
+    document.body.appendChild(a);
+    // a.innerHTML="this is heading";
+    var b = document.createTextNode("this is my created text");
+
+        a.appendChild(b);
+
+        a.addEventListener("click",()=>{
+            alert("welcome");
+            a.style.color="red";
+        })
+
+
+
+ </script>   
+    
+</body>
+</html>

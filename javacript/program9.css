@@ -1,0 +1,31 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+div
+{
+    width:1200px;
+    min-height: 200px;
+    max-height: fit-content;
+    border: 1px solid red;
+    margin-top:10px;
+    text-align: center;
+    padding:20px;
+    box-sizing: border-box;
+
+}
+div button,input,select
+{
+    padding:8px 20px;
+}
+div input[type="color"]
+{
+    padding:0px;
+    margin:20px;
+}
+#mycolor
+{
+    font-size: 50px;
+    
+}
