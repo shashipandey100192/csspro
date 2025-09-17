@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>change background and text color</h1>
+
+<script>
+
+    function changeback()
+    {
+    var jcolor = prompt("enter color name");
+        if(confirm("do you want to change background color"))
+        {
+            // document.bgColor=jcolor;
+            var tcolor = prompt("enter text color");
+            if(confirm("do you want to change text color"))
+            {
+                document.bgColor = jcolor;
+                document.fgColor = tcolor;
+            }
+
+        }
+        else
+        {
+            alert("pelase try again");
+            changeback();
+
+        }
+
+    }
+
+    changeback();
+</script>
+    
+</body>
+</html>

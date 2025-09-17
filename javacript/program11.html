@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Joining Letter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .letter-container {
+      max-width: 700px;
+      margin: auto;
+      border: 1px solid #ccc;
+      padding: 30px;
+      border-radius: 8px;
+      background-color: #fdfdfd;
+      box-shadow: 2px 5px 10px black;
+    }
+    .header, .footer {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h2 {
+      margin: 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section p {
+      margin: 10px 0;
+    }
+    .signature {
+      margin-top: 40px;
+    }
+    .signature .name {
+      margin-top: 60px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+        <h1> Letter generator</h1>
+    <input type="button" value="generate letter" onclick="generateletter()">
+
+  <div class="letter-container">
+   
+  </div>
+
+
+  <script>
+    function generateletter()
+    {
+        var name,date,dep,loc,manager;
+            name = prompt("enter user name");
+            date = prompt("enter date");
+            dep = prompt("enter dep name");
+            loc = prompt("your current location");
+            manager = prompt("enter manager name");
+        var mypage = document.getElementsByClassName("letter-container");
+        console.log(mypage);
+            mypage[0].innerHTML=`
+                 <div class="header">
+      <h2>[Company Name]</h2>
+      <p>[Company Address]</p>
+    </div>
+
+    <div class="section">
+      <p><strong>Date:</strong> [Date]</p>
+    </div>
+
+    <div class="section">
+      <p>To,<br>
+      [${manager}]<br>
+      [${dep}]<br>
+      [Company Name]</p>
+    </div>
+
+    <div class="section">
+      <p><strong>Subject:</strong> Joining Letter – [${name}]</p>
+    </div>
+
+    <div class="section">
+      <p>Dear [${name}],</p>
+      <p>I am writing this to formally accept the offer for the position of <strong>[Your Designation]</strong> in the <strong>[${dep}]</strong> at <strong>[Company Name]</strong>. I am pleased to confirm that I will be joining on <strong>[${date}]</strong> at <strong>[Joining Time]</strong>.</p>
+      <p>My reporting location will be <strong>[${loc}]</strong> and I will report to <strong>[Manager Name]</strong>. I will submit the required documents listed below by <strong>[Date if applicable]</strong>:</p>
+      <ul>
+        <li>[Document 1]</li>
+        <li>[Document 2]</li>
+        <li>[Document 3]</li>
+      </ul>
+      <p>Thank you for the opportunity. I am excited to join the team and look forward to contributing to the success of <strong>[Company Name]</strong>.</p>
+    </div>
+
+    <div class="signature">
+      <p>Yours sincerely,</p>
+      <p class="name">[${name}]</p>
+      <p>[Address / Phone / Email]</p>
+    </div>
+
+    <div class="footer">
+      <p>[Any company tagline or HR contact info]</p>
+    </div>
+            
+            `;
+
+    }
+
+  </script>
+</body>
+</html>
