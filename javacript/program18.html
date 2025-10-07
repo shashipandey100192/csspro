@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="one">
+    <div></div>
+     <div></div>
+      <div></div>
+    <input type="button" value="add" onclick="adddata()">
+    <input type="button" value="remove" onclick="removedata()">
+     <input type="button" value="find" onclick="searchdata()">
+
+<script>
+
+var mydiv = document.querySelectorAll("div");
+var mytext = document.getElementById('one');
+
+var product=["mobile",5000,true];
+console.log(product);
+function disp()
+{
+mydiv[0].innerHTML=`${product}`;
+}
+
+disp();
+
+
+function adddata()
+{
+//    product.unshift(prompt("enter data"));
+// product.unshift(mytext.value);
+product.push(mytext.value);
+   console.log(product); 
+   disp();
+}
+
+
+function removedata()
+{
+    // product.shift();
+    product.pop();
+    console.log(product);
+    disp();
+}
+
+
+function searchdata()
+{
+    var a = prompt("enter search data");
+    var searchdata = product.indexOf(a);
+    mydiv[1].innerHTML=`index match: ${searchdata}`;
+    console.log(searchdata);
+    product.splice(searchdata,1);
+    disp();
+    
+
+}
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

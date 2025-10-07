@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        function course()
+        {
+            function mern()
+            {
+                console.log("mern course");
+            }
+             mern();
+            
+            var x = ()=>
+            {
+                return "web course";
+            }
+            console.log(x());
+            x();
+
+            let details  = (name,duration)=>{
+                // return duration
+                if(name.length>=5)
+            {
+                return name;
+            }
+            else
+            {
+                return "not valid";
+            }
+            };
+
+            console.log(details("plokui","2"));
+
+             const y = ()=>{
+            return `${details("ravi","8")} / ${mern()} / ${x()}`;
+        }
+        y();
+       
+
+        }
+        course();
+       
+
+
+
+    </script>
+    
+</body>
+</html>

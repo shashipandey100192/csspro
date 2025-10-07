@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+
+
+<script>
+    function myfunc()
+    {
+        var a =new Date();
+
+        console.log(a);
+        console.log(typeof(a));
+        var h = a.getHours();
+        var m = a.getMinutes();
+        var s = a.getSeconds();
+        console.log(h);
+        document.getElementsByTagName("h1")[0].innerHTML=`Current Time: ${h}:${m}:${s}`; 
+        
+        if(h>=14 && m>=47 && s>=20)
+    {
+        alert("off time");
+        // window.close();
+    }
+    }
+
+    myfunc();
+
+    setInterval("myfunc()",1000);
+
+
+</script>
+</body>
+</html>

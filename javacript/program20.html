@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+    </style>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .myrow {
+            width: 100%;
+            height: 50px;
+            background-color: lightblue;
+            text-align: right;
+        }
+
+        .myrow button {
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            background-color: transparent;
+            border-radius: 50%;
+        }
+
+        .myrow button:hover {
+            background-color: antiquewhite;
+        }
+
+        #applist {
+            width: 300px;
+            min-height: 400px;
+            max-height: 400px;
+            overflow-y: scroll;
+            border: 1px solid red;
+            background-color: bisque;
+            position: absolute;
+            right: 0;
+            display: none;
+        }
+
+        #applist section {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #applist a {
+            width: 80px;
+            height: 80px;
+            margin: 7px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            text-align: center;
+            box-shadow: 0px 0px 3px #6d6d6d;
+            color: rgb(46, 45, 45);
+            text-decoration: none;
+            padding-top: 9px;
+            box-sizing: border-box;
+        }
+
+        #applist i {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="myrow">
+        <button title="applistshow"><i class="fa fa-th"></i></button>
+        <div id="applist">
+            <section>
+            </section>
+
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var menu = [
+            {
+                appname: "setting",
+                appicon: '<i class="fa fa-cog" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+            {
+                appname: "facebook",
+                appicon: '<i class="fa fa-facebook" aria-hidden="true"></i>',
+                applink: "http://facebook.com"
+            },
+            {
+                appname: "setting",
+                appicon: '<i class="fa fa-cog" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+            {
+                appname: "setting",
+                appicon: '<i class="fa fa-cog" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+            {
+                appname: "setting",
+                appicon: '<i class="fa fa-cog" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+            {
+                appname: "google",
+                appicon: '<i class="fa fa-google" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+             {
+                appname: "google",
+                appicon: '<i class="fa fa-google" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+             {
+                appname: "google",
+                appicon: '<i class="fa fa-google" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+             {
+                appname: "google",
+                appicon: '<i class="fa fa-google" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            },
+             {
+                appname: "google",
+                appicon: '<i class="fa fa-google" aria-hidden="true"></i>',
+                applink: "http://google.com"
+            }
+
+        ]
+
+        var myapplist = document.getElementById("applist");
+        var btn = document.querySelectorAll(".myrow>button");
+        var apparea = document.querySelectorAll("#applist>section");
+        // var btn = document.getElementById("applist").children;
+        console.log(btn);
+
+        btn[0].addEventListener("click", () => {
+            var a = btn[0].getAttribute("title");
+            if (a == "applistshow") {
+                myapplist.style.display = "block";
+                btn[0].setAttribute("title", "applisthide");
+            }
+            else {
+                myapplist.removeAttribute("style");
+                btn[0].setAttribute("title", "applistshow");
+            }
+        });
+
+        var cusapp = menu.map((m) => {
+            return `<a href="${m.applink}">
+            ${m.appicon}
+                    <p>${m.appname}</p>
+                </a>`
+        });
+
+        apparea[0].innerHTML = cusapp.join("");
+
+    </script>
+
+
+</body>
+
+</html>

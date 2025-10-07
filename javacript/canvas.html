@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <canvas width="500" height="400" id="canvas"></canvas>
+
+    <script>
+        function draw() {
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            var a=20;
+            setInterval(()=>{
+                a++;
+                console.log(a);
+            ctx.fillRect(25, 25, 300, 300);
+            ctx.clearRect(a, 25, 100, 100);
+            if(a>=400)
+            {
+                a=1
+            }
+            },10);
+            
+            //   ctx.strokeRect(50, 50, 50, 50);
+        }
+
+        draw();
+    </script>
+
+</body>
+
+</html>

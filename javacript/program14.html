@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre id="printcode"></pre>
+    <pre>
+        <h2>heading two</h2>
+        sdfhsjdgh sdfhsjdghs
+        sdfjsfh                  sdjfhdf
+        <input>
+    </pre>
+    <h1></h1>
+    <input type="button" onclick="cleartime()" value="clear">
+
+    <script>
+        var a = 100;
+
+        function mycount() {
+            var mytext = document.querySelector("h1");
+            mytext.innerHTML = a;
+            
+        }
+        var c = setTimeout("mycount()",2000000);
+
+
+            function cleartime()
+            {
+                clearTimeout(c);
+                mycount();
+                document.getElementById("printcode").innerHTML = `<pre> 
+                <input>
+                <h1>heading one</h1>
+                </pre>
+                `
+            }
+
+            
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
