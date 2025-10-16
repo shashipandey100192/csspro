@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        ul
+        {
+            list-style-type: none;
+        }
+        ul li
+        {
+            width:200px;
+            height: auto;
+            border:1px solid red;
+            background-color: antiquewhite;
+            float:left;
+            margin:10px;
+            padding:20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <select id="opt">
+        <option>filter by:</option>
+
+    </select>
+    <ul id="one">
+        
+    </ul>
+
+
+<script>
+function apicall()
+{
+    var b = document.getElementById('one');
+    var userlist;
+    fetch("https://dummyjson.com/users").then((r)=>{
+        return r.json()
+        // console.log(r.json());
+    }).then((d)=>{
+        console.log(d.users);
+        userlist = d.users;
+        var usertempl = userlist.map((d)=>{
+            return `<li> 
+                    <h1>${d.id}</h1>
+                    <h4>${d.firstName}</h4>
+                    <h4>${d.age}</h4>
+                    <h4>${d.address.city}</h4>
+
+                </li>`;
+        });
+    
+        b.innerHTML=usertempl.join("");
+     var c = userlist.map((e)=>{
+        return `<option>${e.address.city}</option>`;
+     });
+     console.log(c);
+
+     var jopt = document.getElementById('opt');
+        jopt.innerHTML = c;
+        
+        jopt.addEventListener("change",()=>{
+            x =jopt.value;
+            console.log(x);
+            var filterdata = userlist.filter((f)=>{
+                return f.address.city==x
+            });
+            b.innerHTML="";
+            console.log(filterdata);
+
+            var filterdatampaping = filterdata.map((u)=>{
+                 return `<li> 
+                    <h1>${u.id}</h1>
+                    <h4>${u.firstName}</h4>
+                    <h4>${u.age}</h4>
+                    <h4>${u.address.city}</h4>
+
+                </li>`;
+            })
+
+            b.innerHTML = filterdatampaping.join("");
+
+        })
+    
+    }).catch()
+}
+
+apicall();
+
+
+</script>
+
+
+</body>
+</html>

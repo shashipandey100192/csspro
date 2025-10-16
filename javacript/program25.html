@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="myscreen()">
+<input type="button" value="reload" onclick="pageload()">
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1><h1></h1>
+
+
+
+<script>
+    var a = screen;
+    console.log(a);
+    var b = a.width;
+    var allheading = document.querySelectorAll("h1");
+        allheading[0].innerHTML=b;
+        allheading[1].innerHTML=`screen height: ${a.height}`;
+    var c = a.orientation.type;
+        if(c=="landscape-primary")
+        {
+            allheading[2].innerHTML="screen not valid ";
+
+        }
+
+        function myscreen()
+        {
+            allheading[3].innerHTML=a.width;
+                if(a.width>=1200)
+                {
+                    document.bgColor="green";
+                }
+                else if(a.width>=800)
+                {
+                    document.bgColor="red";
+                }
+                else
+                {
+                    document.bgColor="orange";
+                }
+
+        }
+    
+myscreen();
+
+
+var myloc = location;
+        allheading[4].innerHTML=`my current address: ${myloc.pathname}`;
+function mylocation()
+{
+
+
+}
+function pageload()
+{
+    myloc.reload();
+    myloc.href="http://google.com";
+}
+
+
+
+var myarr = []
+var myarr1 = new Array()
+var myobj = {}
+var myobj1 = new Object()
+
+
+var mystring = "this is my text";
+console.log(mystring);
+console.log(typeof(mystring));
+
+var mystring1 =new String(myloc.pathname);
+console.log(mystring1);
+console.log(typeof(mystring1));
+
+
+</script>
+
+    
+</body>
+</html>

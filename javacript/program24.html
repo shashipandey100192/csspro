@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <input type="button" value="show" onclick="xyz()">
+
+
+    <script>
+        // function Students(name,id,course,phone)
+        // {
+        //     this.sname = name;
+        //     this.sid=id;
+        //     this.scourse = course;
+        //     this.sphone = phone;
+        // }
+
+        class Students {
+            constructor(name, id, course, phone) {
+                this.sname = name;
+                this.sid = id;
+                this.scourse = course;
+                this.sphone = phone;
+                this.sinfo = ()=>{
+                        return `${this.duration} and ${this.scourse}`;
+                };
+                this.smsg = ()=>{
+                    return alert(`${this.sname}`);
+                }
+            }
+
+        }
+
+
+        Students.prototype.duration = "6month";
+        Students.prototype.interview = true
+
+
+        var mernstudent = new Students("ravi", 20, "mern", "545454545");
+        console.log(mernstudent);
+        var a = document.querySelectorAll("h1");
+        a[0].innerHTML = mernstudent.sname;
+        a[1].innerHTML = mernstudent.duration;
+        a[2].innerHTML = mernstudent.sinfo();
+
+        function xyz()
+        {
+            mernstudent.smsg();
+        }
+
+
+    </script>
+
+</body>
+
+</html>

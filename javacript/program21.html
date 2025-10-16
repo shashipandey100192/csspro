@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="student name"><br>
+    <input type="text" placeholder="age"><br>
+    <input type="tel" placeholder="phone"><br>
+    <input type="button" value="submit"> 
+
+    <hr>
+    <button type="button" onclick="sortfunc()">A-Z</button>
+    <table border="1" align="center" cellspacing="5" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Student age</th>
+                <th>Student phone</th>
+            </tr>
+        </thead>
+        <tbody id="mydata">
+            
+        </tbody>
+
+
+    </table>
+
+
+
+<script>
+    var stu = [100,800,670,500,"kumar",750];
+    console.log(stu);
+    var databypass;
+    var students = [
+        {
+            name:"kumar",
+            age:20,
+            phone:"87541857"
+        },
+        {
+            name:"khan",
+            age:30,
+            phone:"78878787"
+        }
+    ];
+
+
+    var allinput = document.querySelectorAll("input");
+    console.log(allinput);
+
+     allinput[3].addEventListener("click",()=>{
+        students.unshift({name:allinput[0].value,age:allinput[1].value,phone:allinput[2].value});
+         localStorage.setItem("localdata",JSON.stringify(students));
+         sessionStorage.setItem("sessiondata",JSON.stringify(students));
+        getalldata();
+
+     });
+
+function getalldata()
+{
+    var mylocaldata =JSON.parse(localStorage.getItem("localdata"));
+        console.log(mylocaldata);
+        console.log(typeof(mylocaldata));
+        databypass = mylocaldata;
+        var jsdata  = document.getElementById("mydata");
+
+        var mytemp = mylocaldata.map((d)=>{
+            return `<tr>
+                <td>${d.name}</td>
+                <td>${d.age}</td>
+                <td>${d.phone}</td>
+
+            </tr>`;
+        });
+        jsdata.innerHTML = mytemp.join("");
+            
+}
+
+
+function sortfunc()
+{
+    stu.sort();
+    console.log(stu);
+
+}
+
+
+
+
+
+   
+
+
+</script>
+
+
+    
+
+
+
+    
+</body>
+</html>
