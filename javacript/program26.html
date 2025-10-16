@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var a;
+        function myswitch() {
+
+            a = prompt("enter your course");
+
+            switch (a) {
+                case "mern":
+                    alert("your course selected :" + a);
+                    userdetials();
+                    printdetails();
+                    break;
+                case "java":
+                    alert("your course selected " + a);
+                    userdetials();
+                        status();
+                        statuscode();
+                        printdetails();
+                   
+                    break;
+                case "py":
+                    alert("your course selected " + a);
+                    userdetials();
+                    userp();
+                    printdetails();
+                    break;
+                default:
+                    alert("this course is not valid");
+
+            }
+
+        }
+
+        myswitch();
+
+        var name, age, phone;
+        var msg;
+        function userdetials() {
+            name = prompt("enter name");
+            age = prompt("enter age");
+           
+            if (age >= 30 && a=="java") {
+                msg = "over";
+                alert(msg);
+               
+            }
+            
+            else if (age >= 20 && a=="java") {
+               
+                msg = "under";
+                alert(msg);
+            }
+            else {
+               msg = "not_valid";
+                alert(msg);
+            }
+
+        }
+
+        function userp() {
+            phone = prompt("enter phone no");
+        }
+
+    
+var scode;
+
+function status()
+{
+    switch(msg)
+    {
+        case "over":
+            alert("over age");
+            scode = 50;
+        break;
+        case "under":
+            alert("under age");
+            scode = 150;
+        break;
+        default:
+            alert("this is not valid");
+
+    }
+}
+
+function statuscode()
+{
+    switch(true)
+    {
+        case scode==50:
+            alert("this is status code"+scode);
+        break;
+        case scode==150:
+            alert("this is status code"+scode);
+        break;
+        
+    }
+}
+
+
+function printdetails()
+{
+document.write(`
+
+    <h1> student Name: ${name}</h1>
+    <h1> student course: ${a}</h1>
+    <h1> student age: ${age}</h1>
+    <h1> student status code: ${scode}</h1>
+    <h1> student status: ${msg}</h1>
+    <div> ${phone? "<h1> student phone no: ${phone}</h1>":"" }</div>
+`);
+
+
+
+}
+
+
+
+
+    </script>
+
+</body>
+
+</html>
